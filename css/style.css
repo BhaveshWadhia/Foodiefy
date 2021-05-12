@@ -558,7 +558,7 @@ pre {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  max-width: 50%; }
+  max-width: 100%; }
 
 .col-7 {
   -webkit-box-flex: 0;
@@ -8276,10 +8276,11 @@ textarea.form-control {
       color: #fff; }
 
 #map {
-  width: 100%; }
-  @media (max-width: 767.98px) {
+  width: 100%; 
+}
+  @media (max-width: 100%) {
     #map {
-      height: 300px;
+      height: 500px;
       margin-bottom: 30px; } }
 
 @-webkit-keyframes pulse {
