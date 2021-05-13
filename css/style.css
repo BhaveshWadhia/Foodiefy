@@ -62,7 +62,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff; 
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -8975,15 +8976,63 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
     
-.loginform{   
-        margin-left:70%;
+.loginform{  
+
         background:black;
-        opacity:70%;
         align-content: center;
-        position:absolute; 
-        height: 100vh;
+        position:fixed; 
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
         width: 100%;
-        
-        z-index: 2;
-}   
-   
+        top:0;
+        left:0;
+        overflow-y:hidden;
+        overflow-x:hidden;
+        z-index: 5;
+        padding-top:50px;
+        color: rgba(255, 255, 255, 0.9) !important;
+        padding-left: 10px;
+} 
+
+.loginbtn{
+    display: block;
+    font-size: 1rem;
+    padding: 15px;
+    width: 30%;
+    align-content: center;
+    line-height: 1.5;
+    background-color:#fac564;
+    color: black;
+    opacity: 100%;
+    border: none;
+    background-clip: padding-box;
+    border-radius:5px;
+    text-align: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-left:35%;
+}
+
+.loginbtn:hover{
+border-radius: 5px;
+transition:all 800ms;
+background-color: transparent;
+color: white;
+border:1px solid #fac564;
+}
+
+.loginheading1
+{
+font-size: 50px;
+
+}
+.loginheading2
+{
+font-size: 60px;
+color:#fac564 ;
+}
+
+body>*:not(.loginpage){
+filter: blur(10px);
+}
+

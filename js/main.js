@@ -2,7 +2,6 @@
  	duration: 800,
  	easing: 'slide'
  });
-
 (function($) {
 
 	"use strict";
@@ -288,11 +287,6 @@
 	  'format': 'm/d/yyyy',
 	  'autoclose': true
 	});
-
 	$('#appointment_time').timepicker();
-
-
-
-
 })(jQuery);
 

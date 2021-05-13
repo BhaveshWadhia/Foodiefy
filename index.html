@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="=css/myCss.css" >
 
     <link rel="stylesheet" href="css/aos.css">
 
@@ -29,7 +28,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+       
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 		      <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Foodiefy<br><small>Very Delicious</small></a>
 		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,14 +50,32 @@
 
     <section class="loginpage">
         <div class="loginform"> 
-            <form action="action_page.php" method="post">  
-                  <label for="uname"><b>Username</b></label><br>
-                  <input type="text" placeholder="Enter Username" name="uname" required><br>
-                  <label for="psw"><b>Password</b></label><br>
-                  <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-                  <button type="submit">Login</button>
-                  <button type="button" class="cancelbtn">Cancel</button>
-              </form>
+            <form method="post" autocomplete="off">
+                <span class="loginheading1">Login to </span><span class="loginheading2"> Foodiefy</span><br><br>  
+                <label for="uname"><b>Username</b></label><br>
+                <input type="text" class="form-control" placeholder="Enter Username" name="uname" required><br>
+                  
+                <label for="psw"><b>Password</b></label><br>
+                <input type="password" class="form-control" placeholder="Enter Password" name="psw" required><br><br>
+                  
+                <button type="submit" class="loginbtn" onclick="login()" id="loginclicker">Login</button>
+                <button type="button" class="loginbtn">Cancel</button>
+                <script type="text/javascript">
+                function login(){
+                    console.log("Inside Function");
+                    var checkValidation = true;
+                    if(checkValidation == true){
+                        var pageProperty = document.createElement("pageProperty");
+                        document.head.appendChild(pageProperty);
+                        pageProperty.sheet.insertRule("body{ filter:blur(0px)}")
+                        console.log("Validation Succesfull, property should change");
+                        console.log("Login Clicked")
+                    }
+                    else
+                        console.log("Validation Failed");
+                };
+                </script>
+            </form>
         </div>
     </section> 
 
@@ -337,8 +355,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script> 
   </body>
 </html>
