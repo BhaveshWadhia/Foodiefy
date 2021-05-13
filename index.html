@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body id="body_id">
        
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
@@ -49,7 +49,7 @@
     <!-- END nav -->
 
     <section class="loginpage">
-        <div class="loginform"> 
+        <div class="loginform" id="loginform_id"> 
             <form method="post" autocomplete="off">
                 <span class="loginheading1">Login to </span><span class="loginheading2"> Foodiefy</span><br><br>  
                 <label for="uname"><b>Username</b></label><br>
@@ -58,18 +58,18 @@
                 <label for="psw"><b>Password</b></label><br>
                 <input type="password" class="form-control" placeholder="Enter Password" name="psw" required><br><br>
                   
-                <button type="submit" class="loginbtn" onclick="login()" id="loginclicker">Login</button>
+                <button type="button" class="loginbtn" onclick="login()" id="loginclicker">Login</button>
                 <button type="button" class="loginbtn">Cancel</button>
                 <script type="text/javascript">
                 function login(){
                     console.log("Inside Function");
                     var checkValidation = true;
                     if(checkValidation == true){
-                        var pageProperty = document.createElement("pageProperty");
-                        document.head.appendChild(pageProperty);
-                        pageProperty.sheet.insertRule("body{ filter:blur(0px)}")
-                        console.log("Validation Succesfull, property should change");
-                        console.log("Login Clicked")
+                        var chgStyle = document.getElementById("loginform_id");
+                        var chgblur = document.getElementById("body_id");
+                        chgStyle.style.visibility="hidden"
+                        chgblur.className="unblurit"
+                        console.log("Validation Complete");
                     }
                     else
                         console.log("Validation Failed");

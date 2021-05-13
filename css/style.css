@@ -62,7 +62,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 [tabindex="-1"]:focus {
@@ -8976,19 +8976,17 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
     
-.loginform{  
-
-        background:black;
+#loginform_id{     
         align-content: center;
         position:fixed; 
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.95);
         height: 100%;
         width: 100%;
         top:0;
         left:0;
         overflow-y:hidden;
         overflow-x:hidden;
-        z-index: 5;
+        z-index: 3;
         padding-top:50px;
         color: rgba(255, 255, 255, 0.9) !important;
         padding-left: 10px;
@@ -9032,7 +9030,8 @@ font-size: 60px;
 color:#fac564 ;
 }
 
-body>*:not(.loginpage){
-filter: blur(10px);
+body.unblurit{
+filter: blur(0px);
 }
+
 
