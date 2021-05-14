@@ -206,26 +206,15 @@
                 </div>
             </section>
         
-            <script type="text/javascript">
-            //Load the username of the user who has logged in
-                var u_name = sessionStorage.getItem("u_key")
-                document.getElementById("username_display").innerHTML=u_name;
-                //Counter for order placement
-                var orderCounter = 0 ;
-                var str=""
-                function addtolist(itemname)
-                {
-                orderCounter += 1;
-                alert("Your order has been placed for "+"'"+itemname+"'"+"\nTotal order placed: "+orderCounter);
-                str+=itemname + ","; 
-                console.log(str);
-            }
-            </script>
-            <form action="useroder.asp" method="POST">
-            <button type="submit" class="loginbtn" >Confirm & Place Order</button><br><br><br><br>
+            <form action="userorders.asp" method="POST">
+           <!-- Final order confirm button that will redirect to the asp file-->
+                    <input type="text" id="usr_hiddentext" name="username" value=""> 
+                    <input type="text" id="order_hiddentext" name="orders" value="">
+                    <!--Values are provided empty, they will be assigned by javascript at run time -->
+                <button type="submit" class="loginbtn" >Confirm & Place Order</button><br><br><br><br>
         </form>
 
-           
+                <!-- Slider Food menu -->
     <section class="ftco-menu">
     	<div class="container-fluid">
     		<div class="row d-md-flex">
@@ -257,7 +246,7 @@
 		              					<h3><a href="#">Cheese Poppers</a></h3>
 		              					<p>One thing in life that will never let you down is one little piece of cheese</p>
 		              					<p class="price"><span>Rs 200</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -268,7 +257,7 @@
 		              					<h3><a href="#">Paneer Kofta</a></h3>
 		              					<p>Enjoy paneer kofta a dish of potato paneer balls served with delicious curry and naan</p>
 		              					<p class="price"><span>Rs 200</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -279,7 +268,7 @@
 		              					<h3><a href="#">Cheesy Vegetable Discs</a></h3>
 		              					<p>A delight to behold and a greater delight to bite into, Cheesy Vegetable Discs</p>
 		              					<p class="price"><span>Rs 200</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -292,10 +281,10 @@
 		              			<div class="menu-wrap">
 		              				<a href="#" class="menu-img img mb-4" style="background-image: url(images/drink-1.jpg);"></a>
 		              				<div class="text">
-		              					<h3><button class="orde">Lemonade Juice</a></h3>
+		              					<h3><a href="#">Lemonade Juice</a></h3>
 		              					<p>Lemonade on duty , Easy peasy lemon squeezy , Live life in warm yellow</p>
 		              					<p class="price"><span>Rs 150</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -306,7 +295,7 @@
 		              					<h3><a href="#">Pineapple Juice</a></h3>
 		              					<p>Be a pineapple: Stand tall, wear a crown, and be sweet on the inside</p>
 		              					<p class="price"><span>Rs 150</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -317,7 +306,7 @@
 		              					<h3><a href="#">Soda Drinks</a></h3>
 		              					<p>FLet us have wine and women, mirth and laughter, sermons and soda water the day after</p>
 		              					<p class="price"><span>Rs 150</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -333,7 +322,7 @@
 		              					<h3><a href="#">Dal Makhani</a></h3>
 		              					<p>Enjoy Creamy & buttery Dal Makhani A bowl of warm dal, rice topped with ghee</p>
 		              					<p class="price"><span>Rs 350</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -344,7 +333,7 @@
 		              					<h3><a href="#">Palak Paneer</a></h3>
 		              					<p>Enjoy Indian cottage cheese cubes in a mild, spiced smooth spinach sauce with fresh spinach leaves, onions</p>
 		              					<p class="price"><span>Rs 350</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -355,7 +344,7 @@
 		              					<h3><a href="#">Cumin Rice</a></h3>
 		              					<p>Enjoy the most common north dish with reen cardamom pods, Bay leaf, Ground black pepper (pepper and cumin)</p>
 		              					<p class="price"><span>Rs 350</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -371,7 +360,7 @@
 		              					<h3><a href="#">Choclate Blast</a></h3>
                                         <p>If you cant remember my name just say choclate and ill be around!!</p>
 		              					<p class="price"><span>Rs 150</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -383,7 +372,7 @@
 		              					<h3><a href="#">Moong Daal Halwa</a></h3>
 		              					<p>The delectable combination of moong dal cooked in desi ghee makes it the ideal dessert you want to snuggle.</p>
 		              					<p class="price"><span>Rs 150</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -394,7 +383,7 @@
 		              					<h3><a href="#">Kulfi Ice Cream </a></h3>
 		              					<p>You can't buy happiness, but you can buy ice cream and that is pretty much the same thing</p>
 		              					<p class="price"><span>Rs 150</span></p>
-		              					<p><a href="#" class="btn btn-white btn-outline-white">Add to cart</a></p>
+		              					<p><a onclick="cart_alert()" class="btn btn-white btn-outline-white">Add to cart</a></p>
 		              				</div>
 		              			</div>
 		              		</div>
@@ -408,6 +397,33 @@
     	</div>
     </section>
 
+ <!-- Script for ordering the food -->
+ <script type="text/javascript">
+    //Load the username of the user who has logged in
+        var u_name = sessionStorage.getItem("u_key")
+        document.getElementById("username_display").innerHTML=u_name;
+        //Assign value to form hidden elements
+        document.getElementById("usr_hiddentext").value=u_name;
+    //Counter for order placement
+        var orderCounter = 0 ;
+        var str=""
+        function addtolist(itemname){
+            orderCounter += 1;
+            alert("Your order has been placed for "+"'"+itemname+"'"+"\nTotal order placed: "+orderCounter);
+            if(orderCounter == 1) { str=itemname; }
+            else {str+=","+itemname;}
+            console.log(str);
+            //Assign value to form hidden elements
+            document.getElementById("order_hiddentext").value=str;
+        };
+        function cart_alert(){
+            alert("Coming soon!!");
+        };
+    </script>    
+
+
+
+<!-- Footer -->
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>
       <div class="container">

@@ -8990,6 +8990,7 @@ textarea.form-control {
     padding-top:20px;
     padding-left: 10px;
     z-index: 10;
+    outline:3px solid #fac564  ;
     color: rgba(255, 255, 255, 0.9) !important;
     border-radius:10px;   
 } 
@@ -9057,3 +9058,12 @@ textarea.form-control {
 color: rgb(194, 194, 194);
 text-decoration: none;
 }
+
+#usr_hiddentext{
+visibility:hidden;
+}
+
+#order_hiddentext{
+    visibility:hidden;
+    }
+    
