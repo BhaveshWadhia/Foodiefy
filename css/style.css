@@ -8979,7 +8979,7 @@ textarea.form-control {
 .loginform{ 
     align-content: center;
     position:fixed; 
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.80);
     height: 94%;
     width: 50%;
     top:3%;
