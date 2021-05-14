@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="loginbody">
+    <div class="clickblocker"></div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
 		      <a class="navbar-brand" href="index.html"><span class="flaticon-pizza-1 mr-1"></span>Foodiefy<br><small>Very Delicious</small></a>
@@ -53,24 +54,14 @@
             <form method="post" action="login_action.asp" autocomplete="off">
                 <span class="loginheading1">Login to </span><span class="loginheading2"> Foodiefy</span><br><br>  
                 <label for="uname"><b>Username</b></label><br>
-                <input type="text" class="form-control" placeholder="Enter Username" name="uname" required id="uname_id"><br>
+                <input type="text" class="form-control" placeholder="Enter Username" name="uname" id="uname_id"><br>
                   
                 <label for="psw"><b>Password</b></label><br>
-                <input type="password" class="form-control" placeholder="Enter Password" name="psw" required id="psw_id"><br><br>
+                <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psw_id"><br><br>
                   
-                <button type="submit" class="loginbtn" id="loginclicker">Login</button>
+                <button type="submit" class="loginbtn" >Login</button>
                 <button type="button" class="loginbtn" onclick="cancel()">Cancel</button>
                 <script type="text/javascript">
-                function login(){
-                    //First execute the asp & return here 
-                    var checkValidation = true;
-                    if(checkValidation == true){
-                        var chgStyle = document.getElementById("loginform_id");
-                        var chgblur = document.getElementById("body_id");
-                        chgStyle.style.visibility="hidden"
-                        chgblur.className="unblurit"
-                    } 
-                };
                     function cancel(){
                             //Clear text
                             document.getElementById("uname_id").value = ""
@@ -358,5 +349,5 @@
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script> 
-  </body>
+</body>
 </html>

@@ -20,8 +20,8 @@
                         pass = res("Password")
                         if(u = usn And p = pass) Then
                             status = True
-                                ' We have to write a code so that a alert is displayed i the wesite from here itself
-                                Response.write("<script language=""javascript"">alert('Login Successfull!');</script>")
+                                'Diplay user that the login was sucessfull & redirect to the home page
+                                Response.write("<script language=""javascript"">alert('Login Successfull!!');</script>")
                                 Server.Execute("index.html")  
                             Exit Do
                         else
@@ -30,8 +30,8 @@
                         End if
                     Loop
                     if res.EOF = True And status = False Then
-                        'We have to write a code so that a text is displayed i the wesite from here itself that login failed 
-                        Response.write("<script language=""javascript"">alert('Login Unsuccessfull');</script>")
+                        'Diplay user that the login was unsucessfull & redirect to the login page
+                        Response.write("<script language=""javascript"">alert('Login Unsuccessfull!!\nPlease check if all fields are correct');</script>")
                         Server.Execute("login.html")
                     End If
             End If
