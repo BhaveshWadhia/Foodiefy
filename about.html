@@ -42,13 +42,17 @@
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item active"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="login.html" title="Logout" id="username_display"></a></li>
 	        </ul>
 	      </div>
 		  </div>
 	  </nav>
     <!-- END nav -->
-
-
+    <script type="text/javascript">
+        var u_name = sessionStorage.getItem("u_key")
+        document.getElementById("username_display").innerHTML=u_name;
+    </script>
+    
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
       <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
       	<div class="overlay"></div>
@@ -58,7 +62,6 @@
             	<h1 class="mb-3 mt-5 bread">About</h1>
 	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
             </div>
-
           </div>
         </div>
       </div>

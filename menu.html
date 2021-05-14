@@ -42,6 +42,7 @@
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="login.html" title="Logout" id="username_display"></a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -59,7 +60,6 @@
             	<h1 class="mb-3 mt-5 bread">Our Menu</h1>
 	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Menu</span></p>
             </div>
-
           </div>
         </div>
       </div>
@@ -207,14 +207,20 @@
             </section>
         
             <script type="text/javascript">
+            //Load the username of the user who has logged in
+                var u_name = sessionStorage.getItem("u_key")
+                document.getElementById("username_display").innerHTML=u_name;
+                //Counter for order placement
                 var orderCounter = 0 ;
+                var str=""
                 function addtolist(itemname)
                 {
                 orderCounter += 1;
-                alert("Your order has been placed for: "+itemname+"\nTotal order placed: "+orderCounter);
-                }
+                alert("Your order has been placed for "+"'"+itemname+"'"+"\nTotal order placed: "+orderCounter);
+                str+=itemname + ","; 
+                console.log(str);
+            }
             </script>
-    
             <form action="useroder.asp" method="POST">
             <button type="submit" class="loginbtn" >Confirm & Place Order</button><br><br><br><br>
         </form>

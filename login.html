@@ -42,6 +42,7 @@
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+              <li class="nav-item" id="username_display"></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -59,7 +60,7 @@
                 <label for="psw"><b>Password</b></label><br>
                 <input type="password" class="form-control" placeholder="Enter Password" name="psw" id="psw_id"><br><br>
                   
-                <button type="submit" class="loginbtn" >Login</button>
+                <button type="submit" class="loginbtn" onclick="display_username()">Login</button>
                 <button type="button" class="loginbtn" onclick="cancel()">Cancel</button>
                 <script type="text/javascript">
                     function cancel(){
@@ -67,6 +68,12 @@
                             document.getElementById("uname_id").value = ""
                             document.getElementById("psw_id").value = ""
                     };
+                    function display_username()
+                    {
+                        var username_text = document.getElementById("uname_id").value;
+                        document.getElementById("username_display").innerHTML=username_text;
+                        sessionStorage.setItem("u_key",username_text);
+                    }
                 </script>
             </form>
         </div>

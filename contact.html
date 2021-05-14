@@ -42,12 +42,17 @@
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
+              <li class="nav-item"><a href="login.html" title="Logout" id="username_display"></a></li>
+            </ul>
 	      </div>
 		  </div>
 	  </nav>
     <!-- END nav -->
 
+    <script type="text/javascript">
+        var u_name = sessionStorage.getItem("u_key")
+        document.getElementById("username_display").innerHTML=u_name;
+    </script>
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
 
       <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
@@ -65,57 +70,60 @@
     </section>
 
     <section class="ftco-section contact-section">
-      <div class="container mt-5">
-        <div class="row block-9">
-					<div class="col-md-4 contact-info ftco-animate">
-						<div class="row">
-							<div class="col-md-12 mb-4">
-	              <h2 class="h4">Contact Information</h2>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Address: </span>Foodiefy Cafeteria-406, Swami Vivekananda Rd next to Pawan Hans airport area, Vile Parle(West), Mumbai Maharashtra-400056</p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Phone:<br></span> <a href="tel://1234567920">+91 8850905565<br>+91 8850905565</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Email: <br></span> <a href="mailto:info@yoursite.com">wadhiabhavesh@gmail.com<br>wadhiabhavesh@gmail.com</a></p>
-	            </div>
-	            <div class="col-md-12 mb-3">
-	              <p><span>Website: </span> <a href="#">foodiefy.com</a></p>
-	            </div>
-						</div>
-					</div>
-					<div class="col-md-1"></div>                
-          <div class="col-md-6 ftco-animate">
-            <form action="#" class="contact-form">
-            	<div class="row">
-            		<div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Your Name">
-	                </div>
+        <div class="container mt-5">
+          <div class="row block-9">
+                      <div class="col-md-4 contact-info ftco-animate">
+                          <div class="row">
+                              <div class="col-md-12 mb-4">
+                    <h2 class="h4">Contact Information</h2>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <p><span>Address: </span>Foodiefy Cafeteria-406, Swami Vivekananda Rd next to Pawan Hans airport area, Vile Parle(West), Mumbai Maharashtra-400056</p>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <p><span>Phone:<br></span> <a href="tel://1234567920">+91 8850905565<br>+91 </a></p>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <p><span>Email: <br></span> <a href="mailto:info@yoursite.com">wadhiabhavesh@gmail.com<br>wadhiabhavesh@gmail.com</a></p>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <p><span>Website: </span> <a href="#">foodiefy.com</a></p>
+                  </div>
                 </div>
-                
-                <div class="col-md-6">
-	                <div class="form-group">
-	                  <input type="text" class="form-control" placeholder="Your Email">
-	                </div>
-	                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
+            </div>
+        <div class="col-md-1"></div> 
+              
+        <!-- Contact Form -->
+            <div class="col-md-6 ftco-animate">
+              <form action="contact_action.asp" method="POST" class="contact-form">
+                  <div class="row">
+                      <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name">
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" name="email" class="form-control" placeholder="Your Email">
+                      </div>
+                      </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="subject"class="form-control" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                  <textarea name="message"  cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    
   
     <footer class="ftco-footer ftco-section img">
     	<div class="overlay"></div>

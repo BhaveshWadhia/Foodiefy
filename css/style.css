@@ -9014,7 +9014,7 @@ textarea.form-control {
     }
     
     .loginbody>*:not(.loginpage){
-    filter: blur(4px);
+    filter: blur(2px);
     }
     
     .clickblocker{
@@ -9053,3 +9053,7 @@ textarea.form-control {
     height: 40px;
 }
 
+#username_display{
+color: rgb(194, 194, 194);
+text-decoration: none;
+}
