@@ -8981,9 +8981,10 @@ textarea.form-control {
         position:fixed; 
         background-color: rgba(0, 0, 0, 0.95);
         height: 100%;
-        width: 100%;
+        width: 50%;
         top:0;
-        left:0;
+        margin-left: 25%;
+        margin-right: 25%;
         overflow-y:hidden;
         overflow-x:hidden;
         z-index: 3;
@@ -9030,8 +9031,5 @@ font-size: 60px;
 color:#fac564 ;
 }
 
-body.unblurit{
-filter: blur(0px);
-}
 
 
