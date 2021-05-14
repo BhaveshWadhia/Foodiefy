@@ -47,6 +47,40 @@
 	  </nav>
     <!-- END nav -->
 
+    <!-- LOGIN PAGE-->
+    <section class="loginpage">
+        <div class="loginform" id="loginform_id"> 
+            <form method="post" action="login_action.asp" autocomplete="off">
+                <span class="loginheading1">Login to </span><span class="loginheading2"> Foodiefy</span><br><br>  
+                <label for="uname"><b>Username</b></label><br>
+                <input type="text" class="form-control" placeholder="Enter Username" name="uname" required id="uname_id"><br>
+                  
+                <label for="psw"><b>Password</b></label><br>
+                <input type="password" class="form-control" placeholder="Enter Password" name="psw" required id="psw_id"><br><br>
+                  
+                <button type="submit" class="loginbtn" id="loginclicker">Login</button>
+                <button type="button" class="loginbtn" onclick="cancel()">Cancel</button>
+                <script type="text/javascript">
+                function login(){
+                    //First execute the asp & return here 
+                    var checkValidation = true;
+                    if(checkValidation == true){
+                        var chgStyle = document.getElementById("loginform_id");
+                        var chgblur = document.getElementById("body_id");
+                        chgStyle.style.visibility="hidden"
+                        chgblur.className="unblurit"
+                    } 
+                };
+                    function cancel(){
+                            //Clear text
+                            document.getElementById("uname_id").value = ""
+                            document.getElementById("psw_id").value = ""
+                    };
+                </script>
+            </form>
+        </div>
+    </section> 
+
     <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
         <div class="slider-item">
             <div class="overlay"></div>
