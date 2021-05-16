@@ -68,6 +68,98 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+  .loginform{ 
+    align-content: center;
+    position:fixed; 
+    background-color: rgba(0, 0, 0, 0.80);
+    height: 94%;
+    width: 50%;
+    top:3%;
+    margin-left: 25%;
+    margin-right: 25%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    padding-top:20px;
+    padding-left: 10px;
+    z-index: 10;
+    outline:3px solid #fac564  ;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-radius:10px;   
+} 
+
+.loginbtn:hover{
+    border-radius: 5px;
+    transition:all 500ms;
+    background-color: transparent;
+    color: white;
+    border:1px solid #fac564;
+    border-radius: 5px;
+    }
+    
+    .loginheading1
+    {
+    font-size: 50px;
+    }
+    .loginheading2
+    {
+    font-size: 60px;
+    color:#fac564 ;
+    }
+    
+    .loginbody>*:not(.loginpage){
+    filter: blur(2px);
+    }
+    
+    .clickblocker{
+    position: fixed;
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    }
+
+.loginbtn{
+    display: block;
+    font-size: 1rem;
+    padding: 15px;
+    width: 50%;
+    align-content: center;
+    line-height: 1.5;
+    background-color:#fac564;
+    color: black;
+    opacity: 100%;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    border-radius:5px;
+    text-align: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-left:22%;
+}
+
+#orderbtn{
+    padding: 0px;
+    left:0;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 8px;
+    height: 40px;
+}
+
+#username_display{
+color: rgb(194, 194, 194);
+text-decoration: none;
+}
+
+#usr_hiddentext{
+visibility:hidden;
+}
+
+#order_hiddentext{
+    visibility:hidden;
+    }
+    
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -8975,95 +9067,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-    
-.loginform{ 
-    align-content: center;
-    position:fixed; 
-    background-color: rgba(0, 0, 0, 0.80);
-    height: 94%;
-    width: 50%;
-    top:3%;
-    margin-left: 25%;
-    margin-right: 25%;
-    overflow-y:hidden;
-    overflow-x:hidden;
-    padding-top:20px;
-    padding-left: 10px;
-    z-index: 10;
-    outline:3px solid #fac564  ;
-    color: rgba(255, 255, 255, 0.9) !important;
-    border-radius:10px;   
-} 
-
-.loginbtn:hover{
-    border-radius: 5px;
-    transition:all 500ms;
-    background-color: transparent;
-    color: white;
-    border:1px solid #fac564;
-    border-radius: 5px;
-    }
-    
-    .loginheading1
-    {
-    font-size: 50px;
-    }
-    .loginheading2
-    {
-    font-size: 60px;
-    color:#fac564 ;
-    }
-    
-    .loginbody>*:not(.loginpage){
-    filter: blur(2px);
-    }
-    
-    .clickblocker{
-    position: fixed;
-    background:transparent;
-    height: 100%;
-    width: 100%;
-    z-index: 9;
-    }
-
-.loginbtn{
-    display: block;
-    font-size: 1rem;
-    padding: 15px;
-    width: 50%;
-    align-content: center;
-    line-height: 1.5;
-    background-color:#fac564;
-    color: black;
-    opacity: 100%;
-    border: 1px solid transparent;
-    background-clip: padding-box;
-    border-radius:5px;
-    text-align: center;
-    align-content: center;
-    margin-top: 10px;
-    margin-left:22%;
-}
-
-#orderbtn{
-    padding: 0px;
-    left:0;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 8px;
-    height: 40px;
-}
-
-#username_display{
-color: rgb(194, 194, 194);
-text-decoration: none;
-}
-
-#usr_hiddentext{
-visibility:hidden;
-}
-
-#order_hiddentext{
-    visibility:hidden;
-    }
-    
+  
